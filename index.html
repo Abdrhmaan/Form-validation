@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="conatier">
+        <h1>login register</h1>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>Name</label>
+                <input type="text" id="usernme" class="uswrname">
+                <i class="bx bx-check"></i>
+                <i class='bx bxs-comment-x'></i>
+                <small>error mssege</small>
+                
+            </div>
+            <div class="form-control">
+                <label>email</label>
+                <input type="text" id="emsil" class="uswrname">
+                <i class="bx bx-check"></i>
+                <i class='bx bxs-comment-x'></i>
+                <small>error mssege</small>
+                
+            </div>
+            <div class="form-control">
+                <label>Password</label>
+                <input type="text" id="password" class="uswrname">
+                <i class="bx bx-check"></i>
+                <i class='bx bxs-comment-x'></i>
+                <small>error mssege</small>
+                
+            </div>
+            <div class="form-control ">
+                <label>Confirm Password</label>
+                <input type="text" id="confirm-pssword" class="uswrname">
+                <i class="bx bx-check"></i>
+                <i class='bx bxs-comment-x'></i>
+                <small>error mssege</small>
+                
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+
+
+  
+
+
+
+    <script>
+
+        const username = document.querySelector("#usernme")
+        const email = document.querySelector("#emsil")
+        const password = document.querySelector("#password")
+        const confirmpssword = document.querySelector("#confirm-pssword")
+        const form = document.querySelector("#form")
+       
+
+
+        form.addEventListener("submit" , (event)=>{
+            event.preventDefault()
+  
+   const showEror =(input, mssege)=> {
+
+    let parentElement  = input.parentElement;
+     parentElement.classList = "form-control error "
+     const small = parentElement.querySelector("small")
+     const error  = parentElement.querySelectorAll("i") [1]
+     const suce  = parentElement.querySelectorAll("i") [0]
+     error.style.visibility = 'visible';
+     suce.style.visibility = "hidden"
+     small.innerText = mssege
+     small.style.visibility = 'visible';
+
+     
+     
+     
+
+      console.log(small)
+    
+ 
+     console.log(error)
+     
+    console.log(parentElement)
+
+   
+    
+   }
+
+   const showSucees =(input, mssege)=> {
+
+let parentElement  = input.parentElement;
+ parentElement.classList = "form-control succes "
+ const small = parentElement.querySelector("small")
+ const error  = parentElement.querySelectorAll("i") [1]
+ const suce  = parentElement.querySelectorAll("i") [0]
+ suce.style.visibility = 'visible';
+ error.style.visibility = "hidden"
+ small.innerText = mssege
+ small.style.visibility = 'hidden';
+
+ 
+ 
+ 
+
+  console.log(small)
+
+
+ console.log(error)
+ 
+console.log(parentElement)
+
+
+
+}
+
+const checEmail =(email)=> {
+    const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(reg.test(email.value)){
+        showSucees(email)
+    } else {
+        showEror(email ,"invlid emalid")
+    }
+
+
+
+
+}
+
+const checkPssword = (password , min ,max)=> {
+    if(password.value.length < min){
+        showEror(password , "pssword at leaste 6 chracter")
+    } else  if (password.value.length > max){
+        showEror(password , "pssword at minimax 20 chracter")
+
+        
+    } else {
+        showSucees(password ,'suced')
+    }
+
+    
+
+}
+
+const checkConfirpssword =(password,confirmpssword)=> {
+    if(password.value !== confirmpssword.value){
+        showEror(confirmpssword , "password is not Match")
+    }
+}
+
+              const checkempty =(element)=> {
+                 element.forEach(element => {
+                    
+                    if(element.value === ""){
+                      showEror(element,"input required");
+                      
+                    } else {
+                        showSucees(element)
+                    }
+                   
+                 });
+              }
+
+            
+
+              checkempty([username,password,confirmpssword,email])
+              checEmail(email)
+              checkPssword(password , 6,20)
+              
+              checkPssword(confirmpssword , 6,20)
+              checkConfirpssword(password,confirmpssword)
+
+            
+        })
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

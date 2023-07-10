@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.conatier {
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 10px;
+    max-width: 550px;
+    margin: 100px auto 20px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+
+}  
+.conatier h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.form {
+    padding: 30px 40px;
+}
+
+.form-control{
+    margin: 10px 20px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.form-control input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #e7a1a0;
+   
+}
+.form-control label {
+    display: block;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.form-control input:focus{
+    outline: none;
+    border: 1px solid #1d1e1e;
+}
+.form-control i.bx-check {
+  position: absolute;
+  text-align: right;
+  top: 35px;
+  bottom: 0;
+  right: 15px;
+  visibility: hidden;
+  
+
+}
+.form-control i.bxs-comment-x {
+    position: absolute;
+    text-align: right;
+    top: 35px;
+    bottom: 0;
+    right: 30px;
+    visibility: hidden;
+  
+  }
+.form-control small {
+    font-size: 16px;
+    display: block;
+    color: red;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 20px;
+    background: #ff7333;
+    border: 2px solid #ff7333 ;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    outline: none;
+}
+.form-control.succes input {
+    border:  1px solid #31ca15;
+}
+.form-control.error input {
+    border:  3px solid #ec5a36;
+}
+.form-control .error small {
+    visibility: visible;
+}
+  
+  
+  

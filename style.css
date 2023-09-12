@@ -11,94 +11,99 @@ body {
     height: 100vh;
 
 }
-.conatier {
+.conntainer {
+    background: #fff;
     width: 100%;
-    background: #f9f9f9;
-    border-radius: 10px;
-    max-width: 550px;
-    margin: 100px auto 20px;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-
-}  
-.conatier h1 {
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.conntainer h1 {
     text-align: center;
-    margin-top: 50px;
+    margin: 10px;
     font-size: 40px;
-    font-weight: 700;
+}
+.conntainer h1 span{
+    color: #31ca15;
 }
 .form {
     padding: 30px 40px;
 }
-
-.form-control{
-    margin: 10px 20px;
-    padding-bottom: 5px;
+.for-control{
     margin-bottom: 10px;
+    padding-bottom: 5px;
     position: relative;
+    margin-top: 2px;
+    padding: 2px 5px;
 }
-.form-control input{
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #e7a1a0;
-   
-}
-.form-control label {
+.for-control label{
     display: block;
-    font-weight: 300;
-    margin-bottom: 5px;
+    font-size: 20px;
+    margin: 2px;
 }
-.form-control input:focus{
-    outline: none;
-    border: 1px solid #1d1e1e;
-}
-.form-control i.bx-check {
-  position: absolute;
-  text-align: right;
-  top: 35px;
-  bottom: 0;
-  right: 15px;
-  visibility: hidden;
-  
-
-}
-.form-control i.bxs-comment-x {
-    position: absolute;
-    text-align: right;
-    top: 35px;
-    bottom: 0;
-    right: 30px;
-    visibility: hidden;
-  
-  }
-.form-control small {
-    font-size: 16px;
+.for-control input{
     display: block;
-    color: red;
-    margin-top: 10px;
-    visibility: hidden;
-}
-
-.btn {
     width: 100%;
     padding: 10px 20px;
-    background: #ff7333;
-    border: 2px solid #ff7333 ;
-    color: #fff;
-    cursor: pointer;
-    outline: none;
-    display: block;
-    outline: none;
+    border-radius: 5px;
+    border: 1px solid #a7a1a0;
+  
+    
 }
-.form-control.succes input {
+.for-control i.bx-check{
+    position: absolute;
+    color: #31ca15;
+    top: 30px;
+    right: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: right;
+    visibility: hidden;
+
+  
+}
+.for-control i.bxs-comment-x{
+    position: absolute;
+    color: red;
+    top: 30px;
+    right: 40px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: right;
+    visibility: hidden;
+
+  
+}
+.for-control input:focus{
+    outline: none;
+    border: 1px solid #1d1a1a;
+}
+.for-control small{
+    color: red;
+    font-size: 15px;
+    display: none;
+}
+
+.for-control.succes input {
     border:  1px solid #31ca15;
 }
-.form-control.error input {
+.for-control.error input {
     border:  3px solid #ec5a36;
 }
-.form-control .error small {
+ .for-control small {
     visibility: visible;
+}
+.btn {
+    width: 100%;
+    display: block;
+    padding: 10px 20px;
+    background: #FF7E33;
+    border: 2px solid #FF7E33;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+
 }
   
   

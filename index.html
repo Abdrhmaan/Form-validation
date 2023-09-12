@@ -8,192 +8,174 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="conatier">
-        <h1>login register</h1>
-        <form class="form" id="form">
-            <div class="form-control">
-                <label>Name</label>
-                <input type="text" id="usernme" class="uswrname">
-                <i class="bx bx-check"></i>
-                <i class='bx bxs-comment-x'></i>
-                <small>error mssege</small>
-                
+  
+    <div class="conntainer">
+        <h1>Login  <span>Register</span></h1>
+
+        <form class="form" id="form" >
+
+
+            <div class="for-control">
+                <label>UserNmae</label>
+                <input type="text" id="UserNmae" placeholder="Name">
+                   <i class="bx bx-check"></i>
+                   <i class='bx bxs-comment-x'></i>
+                   <small>Eroor</small>
+
+     
             </div>
-            <div class="form-control">
-                <label>email</label>
-                <input type="text" id="emsil" class="uswrname">
-                <i class="bx bx-check"></i>
-                <i class='bx bxs-comment-x'></i>
-                <small>error mssege</small>
-                
+
+            <div class="for-control">
+                <label>Email</label>
+                <input type="text" id="Email" placeholder="Email">
+                   <i class="bx bx-check"></i>
+                   <i class='bx bxs-comment-x'></i>
+                   <small>Eroor</small>
+
+     
             </div>
-            <div class="form-control">
-                <label>Password</label>
-                <input type="text" id="password" class="uswrname">
-                <i class="bx bx-check"></i>
-                <i class='bx bxs-comment-x'></i>
-                <small>error mssege</small>
-                
+
+
+            <div class="for-control">
+                <label>Pssowrd</label>
+                <input type="password" id="Pssowrd" placeholder="Pssowrd">
+                   <i class="bx bx-check"></i>
+                   <i class='bx bxs-comment-x'></i>
+                   <small>Eroor</small>
+
+     
             </div>
-            <div class="form-control ">
-                <label>Confirm Password</label>
-                <input type="text" id="confirm-pssword" class="uswrname">
-                <i class="bx bx-check"></i>
-                <i class='bx bxs-comment-x'></i>
-                <small>error mssege</small>
-                
+
+
+            <div class="for-control">
+                <label>Confirm Psssowrd</label>
+                <input type="text" id="Confirm" placeholder="Confirm">
+                   <i class="bx bx-check"></i>
+                   <i class='bx bxs-comment-x'></i>
+                   <small>Eroor hh</small>
+
+     
             </div>
-            <button type="submit" class="btn">Submit</button>
+            <button class="btn" type="submit">submit</button>
         </form>
     </div>
 
 
-
   
 
 
-
-    <script>
-
-        const username = document.querySelector("#usernme")
-        const email = document.querySelector("#emsil")
-        const password = document.querySelector("#password")
-        const confirmpssword = document.querySelector("#confirm-pssword")
-        const form = document.querySelector("#form")
-       
+                   <script>
 
 
-        form.addEventListener("submit" , (event)=>{
-            event.preventDefault()
-  
-   const showEror =(input, mssege)=> {
-
-    let parentElement  = input.parentElement;
-     parentElement.classList = "form-control error "
-     const small = parentElement.querySelector("small")
-     const error  = parentElement.querySelectorAll("i") [1]
-     const suce  = parentElement.querySelectorAll("i") [0]
-     error.style.visibility = 'visible';
-     suce.style.visibility = "hidden"
-     small.innerText = mssege
-     small.style.visibility = 'visible';
-
-     
-     
-     
-
-      console.log(small)
-    
- 
-     console.log(error)
-     
-    console.log(parentElement)
-
-   
-    
-   }
-
-   const showSucees =(input, mssege)=> {
-
-let parentElement  = input.parentElement;
- parentElement.classList = "form-control succes "
- const small = parentElement.querySelector("small")
- const error  = parentElement.querySelectorAll("i") [1]
- const suce  = parentElement.querySelectorAll("i") [0]
- suce.style.visibility = 'visible';
- error.style.visibility = "hidden"
- small.innerText = mssege
- small.style.visibility = 'hidden';
-
- 
- 
- 
-
-  console.log(small)
-
-
- console.log(error)
- 
-console.log(parentElement)
-
-
-
-}
-
-const checEmail =(email)=> {
-    const reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(reg.test(email.value)){
-        showSucees(email)
-    } else {
-        showEror(email ,"invlid emalid")
-    }
-
-
-
-
-}
-
-const checkPssword = (password , min ,max)=> {
-    if(password.value.length < min){
-        showEror(password , "pssword at leaste 6 chracter")
-    } else  if (password.value.length > max){
-        showEror(password , "pssword at minimax 20 chracter")
-
-        
-    } else {
-        showSucees(password ,'suced')
-    }
-
-    
-
-}
-
-const checkConfirpssword =(password,confirmpssword)=> {
-    if(password.value !== confirmpssword.value){
-        showEror(confirmpssword , "password is not Match")
-    }
-}
-
-              const checkempty =(element)=> {
-                 element.forEach(element => {
-                    
-                    if(element.value === ""){
-                      showEror(element,"input required");
-                      
-                    } else {
-                        showSucees(element)
-                    }
+                     const Username = document.getElementById("UserNmae")
+                     const Email = document.getElementById("Email")
+                     const password = document.getElementById("Pssowrd")
+                     const Confirm = document.getElementById("Confirm")
+                     const form = document.getElementById("form")
+                       
                    
-                 });
-              }
-
-            
-
-              checkempty([username,password,confirmpssword,email])
-              checEmail(email)
-              checkPssword(password , 6,20)
-              
-              checkPssword(confirmpssword , 6,20)
-              checkConfirpssword(password,confirmpssword)
-
-            
-        })
-       
+                 
+                     
+                     form.addEventListener("submit" , (event)=> {
+                        event.preventDefault()
+                      
+                       
 
 
+                        function ShowErro(input, messege) {
+                           const prente =  input.parentElement;
+                            prente.classList = " for-control error"
+                            const smll = prente.querySelector("small")
+                            const error = prente.querySelectorAll("i")[1]
+                            const succes = prente.querySelectorAll("i")[0]
+                            error.style.visibility = "visible"
+                            succes.style.visibility = "hidden"
+                            smll.innerText = messege
+                            smll.style.display = "block"
+                            console.log(smll)
+                            
+                         
+                           
+                              
+                            
+                        }
 
+                      
+                        function  ShowSuccess(input,) {
+                           const prente =  input.parentElement;
+                            prente.classList = " for-control succes"
+                            const smll = prente.querySelector("small")
+                            const error = prente.querySelectorAll("i")[1]
+                            const succes = prente.querySelectorAll("i")[0]
+                            error.style.visibility = "hidden"
+                            succes.style.visibility = "visible"
+                          
+                            smll.style.display = "none"
+                            console.log(smll)
+                            
+                         
+                           
+                              
+                            
+                        }
 
+                        function  CHECKpsswordlength(input , min,max) {
 
+                            if(input.value.length < min ) {
+                                ShowErro(input , "pssswer at least 6")
 
+                            }else if(input.value.length > max){
+                                ShowErro(input , "pssswer at least 10")
 
+                            }else{
+                                ShowSuccess(input)
+                            }
+                            
+                          
+                        }
+                      
+                      
+                        function checkEMAIL(Email) {
+                             const reg =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                            
+                             if(reg.test(Email.value)){
+                                ShowSuccess(Email)
+                             }else {
+                                ShowErro(Email ,"EMAIL INALID")
+                             }
+                            
+                        }
+                        function confirmPassword(input , password) {
+                            if(input.value !==password.value){
+                                ShowErro(input , "does not match pssword to confirm")
+                            }
+                            
+                        }
 
+                       
 
+                        function CheckEmpty(elments) {
 
+                            elments.forEach(element => {
 
+                                if(element.value === ""){
+                                    ShowErro(element , "input requred")
+                                 
+                                }else{
+                                    ShowSuccess(element)
+                                }
+                                
+                            });
+                            
+                        }
 
-
-
-    </script>
-
+                        CheckEmpty([Username,password,Email,Confirm])
+                        checkEMAIL(Email)
+                        CHECKpsswordlength(password , 6,10)
+                        CHECKpsswordlength(Confirm , 6,10)
+                        confirmPassword(Confirm, password)
+                       
+                     })
+                   </script>
 </body>
 </html>
